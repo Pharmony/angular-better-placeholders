@@ -13,6 +13,9 @@ http://dribbble.com/shots/1254439--GIF-Mobile-Form-Interaction?list=users
 $ bower install angular-better-placeholders
 ```
 
+## Why a fork
+
+Because we had an issue about triming a null value when updating to angularjs 1.7.9 with select component
 
 ## Usage
 Simple include the `better-place-holder` directive as a class on your input fields. (if it doesn't look right make sure that it's container element has `position: relative` set on it)
