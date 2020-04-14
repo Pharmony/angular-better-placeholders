@@ -22,7 +22,7 @@ angular.module('angularBetterPlaceholder', []).directive('betterPlaceholder', fu
         if (value == null) {
           value = ngModel && (ngModel != null) ? ngModel.$viewValue : element.val();
         }
-        return !element[0].validity.badInput && !((value != null) && (!angular.isString(value) || value !== '') && (!angular.isArray(value) || !value.isEmpty()) && (angular.isString(value) || angular.isArray(value) || ((element.val() && element.val().trim().length > 0) || !isNaN(value))));
+        return !element[0].validity.badInput && !((value != null) && (!angular.isString(value) || value !== '') && (!angular.isArray(value) || !value.isEmpty()) && (angular.isString(value) || angular.isArray(value) || (typeof value === 'object') || ((element.val() && element.val().trim().length > 0) || !isNaN(value))));
       };
       required = angular.element('<i class="fa fa-asterisk text-danger fa-required"></i>');
       placeholder = angular.element("<label class='help-block better-placeholder-text'></label>");
